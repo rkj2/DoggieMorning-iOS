@@ -14,6 +14,8 @@
 		833BE7481FAEDCF5007496F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833BE7461FAEDCF5007496F0 /* LaunchScreen.storyboard */; };
 		833BE74B1FAEDCF5007496F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE74A1FAEDCF5007496F0 /* main.m */; };
 		833BE7551FAEDCF6007496F0 /* DoggieMorningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7541FAEDCF6007496F0 /* DoggieMorningTests.m */; };
+		833BE7611FAEE64E007496F0 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7601FAEE64E007496F0 /* Dog.m */; };
+		833BE7661FAEEA8F007496F0 /* DogDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7651FAEEA8F007496F0 /* DogDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,10 @@
 		833BE7501FAEDCF6007496F0 /* DoggieMorningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoggieMorningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		833BE7541FAEDCF6007496F0 /* DoggieMorningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoggieMorningTests.m; sourceTree = "<group>"; };
 		833BE7561FAEDCF6007496F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833BE75F1FAEE64E007496F0 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		833BE7601FAEE64E007496F0 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		833BE7641FAEEA8F007496F0 /* DogDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogDataSource.h; sourceTree = "<group>"; };
+		833BE7651FAEEA8F007496F0 /* DogDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 		833BE72C1FAEDCF5007496F0 = {
 			isa = PBXGroup;
 			children = (
+				833BE7631FAEEA67007496F0 /* DataSources */,
+				833BE7621FAEE658007496F0 /* Models */,
 				833BE7371FAEDCF5007496F0 /* DoggieMorning */,
 				833BE7531FAEDCF6007496F0 /* DoggieMorningTests */,
 				833BE7361FAEDCF5007496F0 /* Products */,
@@ -99,6 +107,24 @@
 				833BE7561FAEDCF6007496F0 /* Info.plist */,
 			);
 			path = DoggieMorningTests;
+			sourceTree = "<group>";
+		};
+		833BE7621FAEE658007496F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				833BE75F1FAEE64E007496F0 /* Dog.h */,
+				833BE7601FAEE64E007496F0 /* Dog.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		833BE7631FAEEA67007496F0 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				833BE7641FAEEA8F007496F0 /* DogDataSource.h */,
+				833BE7651FAEEA8F007496F0 /* DogDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +231,8 @@
 			files = (
 				833BE73A1FAEDCF5007496F0 /* AppDelegate.m in Sources */,
 				833BE74B1FAEDCF5007496F0 /* main.m in Sources */,
+				833BE7661FAEEA8F007496F0 /* DogDataSource.m in Sources */,
+				833BE7611FAEE64E007496F0 /* Dog.m in Sources */,
 				833BE7431FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
