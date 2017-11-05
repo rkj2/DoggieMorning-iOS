@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		833BE73A1FAEDCF5007496F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7391FAEDCF5007496F0 /* AppDelegate.m */; };
+		833BE73D1FAEDCF5007496F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE73C1FAEDCF5007496F0 /* ViewController.m */; };
+		833BE7401FAEDCF5007496F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833BE73E1FAEDCF5007496F0 /* Main.storyboard */; };
+		833BE7431FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7411FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld */; };
+		833BE7451FAEDCF5007496F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 833BE7441FAEDCF5007496F0 /* Assets.xcassets */; };
+		833BE7481FAEDCF5007496F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833BE7461FAEDCF5007496F0 /* LaunchScreen.storyboard */; };
+		833BE74B1FAEDCF5007496F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE74A1FAEDCF5007496F0 /* main.m */; };
+		833BE7551FAEDCF6007496F0 /* DoggieMorningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7541FAEDCF6007496F0 /* DoggieMorningTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		833BE7511FAEDCF6007496F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 833BE72D1FAEDCF5007496F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 833BE7341FAEDCF5007496F0;
+			remoteInfo = DoggieMorning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		833BE7351FAEDCF5007496F0 /* DoggieMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggieMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		833BE7381FAEDCF5007496F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		833BE7391FAEDCF5007496F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		833BE73B1FAEDCF5007496F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		833BE73C1FAEDCF5007496F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		833BE73F1FAEDCF5007496F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		833BE7421FAEDCF5007496F0 /* DoggieMorning.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoggieMorning.xcdatamodel; sourceTree = "<group>"; };
+		833BE7441FAEDCF5007496F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		833BE7471FAEDCF5007496F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		833BE7491FAEDCF5007496F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833BE74A1FAEDCF5007496F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		833BE7501FAEDCF6007496F0 /* DoggieMorningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoggieMorningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		833BE7541FAEDCF6007496F0 /* DoggieMorningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoggieMorningTests.m; sourceTree = "<group>"; };
+		833BE7561FAEDCF6007496F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		833BE7321FAEDCF5007496F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833BE74D1FAEDCF6007496F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		833BE72C1FAEDCF5007496F0 = {
+			isa = PBXGroup;
+			children = (
+				833BE7371FAEDCF5007496F0 /* DoggieMorning */,
+				833BE7531FAEDCF6007496F0 /* DoggieMorningTests */,
+				833BE7361FAEDCF5007496F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		833BE7361FAEDCF5007496F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				833BE7351FAEDCF5007496F0 /* DoggieMorning.app */,
+				833BE7501FAEDCF6007496F0 /* DoggieMorningTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		833BE7371FAEDCF5007496F0 /* DoggieMorning */ = {
+			isa = PBXGroup;
+			children = (
+				833BE7381FAEDCF5007496F0 /* AppDelegate.h */,
+				833BE7391FAEDCF5007496F0 /* AppDelegate.m */,
+				833BE73B1FAEDCF5007496F0 /* ViewController.h */,
+				833BE73C1FAEDCF5007496F0 /* ViewController.m */,
+				833BE73E1FAEDCF5007496F0 /* Main.storyboard */,
+				833BE7441FAEDCF5007496F0 /* Assets.xcassets */,
+				833BE7461FAEDCF5007496F0 /* LaunchScreen.storyboard */,
+				833BE7491FAEDCF5007496F0 /* Info.plist */,
+				833BE74A1FAEDCF5007496F0 /* main.m */,
+				833BE7411FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld */,
+			);
+			path = DoggieMorning;
+			sourceTree = "<group>";
+		};
+		833BE7531FAEDCF6007496F0 /* DoggieMorningTests */ = {
+			isa = PBXGroup;
+			children = (
+				833BE7541FAEDCF6007496F0 /* DoggieMorningTests.m */,
+				833BE7561FAEDCF6007496F0 /* Info.plist */,
+			);
+			path = DoggieMorningTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		833BE7341FAEDCF5007496F0 /* DoggieMorning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833BE7591FAEDCF6007496F0 /* Build configuration list for PBXNativeTarget "DoggieMorning" */;
+			buildPhases = (
+				833BE7311FAEDCF5007496F0 /* Sources */,
+				833BE7321FAEDCF5007496F0 /* Frameworks */,
+				833BE7331FAEDCF5007496F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoggieMorning;
+			productName = DoggieMorning;
+			productReference = 833BE7351FAEDCF5007496F0 /* DoggieMorning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		833BE74F1FAEDCF6007496F0 /* DoggieMorningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833BE75C1FAEDCF6007496F0 /* Build configuration list for PBXNativeTarget "DoggieMorningTests" */;
+			buildPhases = (
+				833BE74C1FAEDCF6007496F0 /* Sources */,
+				833BE74D1FAEDCF6007496F0 /* Frameworks */,
+				833BE74E1FAEDCF6007496F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				833BE7521FAEDCF6007496F0 /* PBXTargetDependency */,
+			);
+			name = DoggieMorningTests;
+			productName = DoggieMorningTests;
+			productReference = 833BE7501FAEDCF6007496F0 /* DoggieMorningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		833BE72D1FAEDCF5007496F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Rajive Jain";
+				TargetAttributes = {
+					833BE7341FAEDCF5007496F0 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					833BE74F1FAEDCF6007496F0 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 833BE7341FAEDCF5007496F0;
+					};
+				};
+			};
+			buildConfigurationList = 833BE7301FAEDCF5007496F0 /* Build configuration list for PBXProject "DoggieMorning" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 833BE72C1FAEDCF5007496F0;
+			productRefGroup = 833BE7361FAEDCF5007496F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				833BE7341FAEDCF5007496F0 /* DoggieMorning */,
+				833BE74F1FAEDCF6007496F0 /* DoggieMorningTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		833BE7331FAEDCF5007496F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833BE7481FAEDCF5007496F0 /* LaunchScreen.storyboard in Resources */,
+				833BE7451FAEDCF5007496F0 /* Assets.xcassets in Resources */,
+				833BE7401FAEDCF5007496F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833BE74E1FAEDCF6007496F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		833BE7311FAEDCF5007496F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833BE73D1FAEDCF5007496F0 /* ViewController.m in Sources */,
+				833BE73A1FAEDCF5007496F0 /* AppDelegate.m in Sources */,
+				833BE74B1FAEDCF5007496F0 /* main.m in Sources */,
+				833BE7431FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833BE74C1FAEDCF6007496F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833BE7551FAEDCF6007496F0 /* DoggieMorningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		833BE7521FAEDCF6007496F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 833BE7341FAEDCF5007496F0 /* DoggieMorning */;
+			targetProxy = 833BE7511FAEDCF6007496F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		833BE73E1FAEDCF5007496F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				833BE73F1FAEDCF5007496F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		833BE7461FAEDCF5007496F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				833BE7471FAEDCF5007496F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		833BE7571FAEDCF6007496F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		833BE7581FAEDCF6007496F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		833BE75A1FAEDCF6007496F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6952L9JMSG;
+				INFOPLIST_FILE = DoggieMorning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajivejain.com.DoggieMorning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		833BE75B1FAEDCF6007496F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6952L9JMSG;
+				INFOPLIST_FILE = DoggieMorning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajivejain.com.DoggieMorning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		833BE75D1FAEDCF6007496F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoggieMorningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajivejain.com.DoggieMorningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoggieMorning.app/DoggieMorning";
+			};
+			name = Debug;
+		};
+		833BE75E1FAEDCF6007496F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DoggieMorningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajivejain.com.DoggieMorningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoggieMorning.app/DoggieMorning";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		833BE7301FAEDCF5007496F0 /* Build configuration list for PBXProject "DoggieMorning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833BE7571FAEDCF6007496F0 /* Debug */,
+				833BE7581FAEDCF6007496F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		833BE7591FAEDCF6007496F0 /* Build configuration list for PBXNativeTarget "DoggieMorning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833BE75A1FAEDCF6007496F0 /* Debug */,
+				833BE75B1FAEDCF6007496F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		833BE75C1FAEDCF6007496F0 /* Build configuration list for PBXNativeTarget "DoggieMorningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833BE75D1FAEDCF6007496F0 /* Debug */,
+				833BE75E1FAEDCF6007496F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		833BE7411FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				833BE7421FAEDCF5007496F0 /* DoggieMorning.xcdatamodel */,
+			);
+			currentVersion = 833BE7421FAEDCF5007496F0 /* DoggieMorning.xcdatamodel */;
+			path = DoggieMorning.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 833BE72D1FAEDCF5007496F0 /* Project object */;
+}
