@@ -10,6 +10,24 @@
 
 @implementation Dog
 
+- (instancetype)initWithJson:(NSDictionary *)dogJson
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    BOOL hasId = (dogJson[@"id"] && dogJson[@"id"]) > 0;
+    BOOL hasPreviewUrl = (dogJson[@"previewURL"] != [NSNull null]) && [dogJson[@"previewURL"] length] > 0;
+    if (hasId && hasPreviewUrl) {
+        self.dogImageId = [NSString stringWithFormat:@"%@", dogJson[@"id"]];
+        self.previewURL = dogJson[@"previewURL"];
+        return self;
+    } else {
+        return nil;
+    }
+    
+}
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
@@ -17,12 +35,14 @@
         return nil;
     }
     self.previewURL = [aDecoder decodeObjectForKey:@"previewURL"];
+    self.dogImageId = [aDecoder decodeObjectForKey:@"id"];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.previewURL forKey:@"previewURL"];
+    [aCoder encodeObject:self.dogImageId forKey:@"id"];
 }
 
 - (NSString *)fileName
@@ -36,4 +56,10 @@
     }
     return nil;
 }
+
+- (void)saveDog
+{
+    //temp
+}
+
 @end

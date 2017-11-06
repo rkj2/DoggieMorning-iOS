@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Dog.h"
+#import "DogDataSource.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //User coordinator pattern here - maybe
+    //User coordinator pattern here - maybe overkill
+  
+    
     
     return YES;
 }

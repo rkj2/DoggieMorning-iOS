@@ -6,13 +6,16 @@
 //  Copyright © 2017 Rajive Jain. All rights reserved.
 //
 
+@import UIKit;
 #import <Foundation/Foundation.h>
+#import "DMPhotoWebService.h"
 
-@interface DogDataSource : NSObject
+@interface DogDataSource : NSObject <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-//conform to datasource and delegate
+- (instancetype)initWith: (DMPhotoWebService *) webService;
 
 //start the dog etch process
+- (void)fetchAllDogs: (void (^)(NSError *))callback;
 
 //archive and retrieve data
 
