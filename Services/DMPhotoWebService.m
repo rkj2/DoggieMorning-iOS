@@ -17,7 +17,6 @@ static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
 
 - (void)fetchAllDogs:(void (^)(NSArray *, NSError *))callback
 {
-//    NSURL *url = [self urlForDogPhotos];
     NSURL *url = [self urlForSearchTerm:@"dog"];
     
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:

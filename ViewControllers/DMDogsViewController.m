@@ -59,7 +59,7 @@
 }
 
 - (IBAction)clearHistory:(id)sender {
-    NSLog(@"clearing history");
+    [self.dogsDataSource clearHistoryFromDiskAndUpdateView:self.collectionView];
 }
 
 @end

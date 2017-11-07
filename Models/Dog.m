@@ -16,7 +16,6 @@
     if (!self) {
         return nil;
     }
-    
     BOOL hasId = (dogJson[@"id"] && dogJson[@"id"]) > 0;
     BOOL hasPreviewUrl = (dogJson[@"previewURL"] != [NSNull null]) && [dogJson[@"previewURL"] length] > 0;
     if (hasId && hasPreviewUrl) {
@@ -47,11 +46,9 @@
 
 - (NSString *)fileName
 {
-    //test
     //self.previewURL = @"https://cdn.pixabay.com/photo/2017/10/26/12/34/fantasy-2890925_150.jpg";
     if ([self.previewURL length] > 0 && self.previewURL != nil)  {
         NSArray *components = [self.previewURL componentsSeparatedByString:@"/"];
-        NSLog(@"%@", components);
         return [components lastObject];
     }
     return nil;

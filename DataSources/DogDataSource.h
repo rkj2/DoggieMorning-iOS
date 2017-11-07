@@ -14,11 +14,9 @@
 
 - (instancetype)initWith: (DMPhotoWebService *) webService;
 
-//start the dog etch process
+//start the dog fetch process
 - (void)fetchAllDogs: (void (^)(NSError *))callback;
 
-//archive and retrieve data
-
 //clear archived data
-
+- (void)clearHistoryFromDiskAndUpdateView:(UICollectionView *)collectionView;
 @end

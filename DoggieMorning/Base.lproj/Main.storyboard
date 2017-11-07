@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-z8-s71">
-                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yqo-Ds-5nR">
                                     <size key="itemSize" width="87" height="90"/>
@@ -58,13 +58,14 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XR-Ev-Uxx">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <stackView contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zI8-fA-Qfd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zI8-fA-Qfd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-Mz-ha8">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                                <color key="backgroundColor" red="0.089835263788700104" green="0.51725953817367554" blue="0.75006502866744995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Fetch Dogs">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,7 +75,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z6-qW-7uK">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="375" height="49.5"/>
+                                                <color key="backgroundColor" red="0.089835263788700104" green="0.51725953817367554" blue="0.75006502866744995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Clear History">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,10 +88,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.089835263788700104" green="0.51725953817367554" blue="0.75006502866744995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zI8-fA-Qfd" secondAttribute="trailing" id="60i-9u-3HH"/>
-                                    <constraint firstAttribute="height" constant="60" id="TN4-yj-7S3"/>
+                                    <constraint firstAttribute="height" constant="100" id="TN4-yj-7S3"/>
                                     <constraint firstItem="zI8-fA-Qfd" firstAttribute="leading" secondItem="3XR-Ev-Uxx" secondAttribute="leading" id="aiK-c4-y5Z"/>
                                     <constraint firstAttribute="bottom" secondItem="zI8-fA-Qfd" secondAttribute="bottom" id="qbI-pX-44C"/>
                                     <constraint firstItem="zI8-fA-Qfd" firstAttribute="top" secondItem="3XR-Ev-Uxx" secondAttribute="top" id="uPX-v9-yNv"/>
@@ -141,6 +143,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="placeholder" width="122" height="103"/>
+        <image name="placeholder" width="150" height="150"/>
     </resources>
 </document>
