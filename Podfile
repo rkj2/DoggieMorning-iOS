@@ -8,6 +8,7 @@ target 'DoggieMorning' do
   # Pods for DoggieMorning
   pod 'SDWebImage', '~> 4.0'
   pod 'AFNetworking', '~> 3.0'
+  pod 'MBProgressHUD', '~> 0.9.2'
   
   target 'DoggieMorningTests' do
     inherit! :search_paths

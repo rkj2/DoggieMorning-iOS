@@ -10,6 +10,7 @@
 #import "DogDataSource.h"
 #import "DMPhotoWebService.h"
 #import "DMHistoryViewController.h"
+#import "MBProgressHUD.h"
 
 @interface DMDogsViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *showButton;
@@ -49,9 +50,11 @@
 }
 - (void)loadData
 {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.dogsDataSource firstFetch:^(NSError *error) {
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
                 [self.collectionView reloadData];
             });
         } else {
@@ -61,9 +64,11 @@
 }
 
 - (IBAction)fetchMoreData:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.dogsDataSource fetchMoreDogs:^(NSError *error) {
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
                 [self.collectionView reloadData];
             });
         } else {
