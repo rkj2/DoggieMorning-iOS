@@ -20,6 +20,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.navigationItem.title = @"History";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -29,7 +30,6 @@
         [self.tableView reloadData];
     }
 }
-
 
 #pragma mark - Datasource and delegate calls
 
