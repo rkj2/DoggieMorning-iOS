@@ -18,8 +18,7 @@
 - (void)configureWithDog:(Dog *)dog
 {
     NSURL *imageUrl = [NSURL URLWithString:[dog previewURL]];
-    [self.imageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"placeholder"] options:SDWebImageRefreshCached];
-    
+    [self.imageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 - (void)prepareForReuse
