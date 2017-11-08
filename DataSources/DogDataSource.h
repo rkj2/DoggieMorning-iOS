@@ -15,7 +15,8 @@
 - (instancetype)initWith: (DMPhotoWebService *) webService;
 
 //start the dog fetch process
-- (void)fetchAllDogs: (void (^)(NSError *))callback;
+- (void)firstFetch: (void (^)(NSError *))callback;
+- (void)fetchMoreDogs: (void (^)(NSError *))callback;
 
 //clear archived data
 - (void)clearHistoryFromDiskAndUpdateView:(UICollectionView *)collectionView;

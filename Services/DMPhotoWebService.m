@@ -13,15 +13,29 @@ static NSString *const kHost = @"pixabay.com";
 static NSString *const kPath = @"/api/";
 static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
 
+@interface DMPhotoWebService()
+@property (nonatomic) NSUInteger pageNumber;
+@end
+
 @implementation DMPhotoWebService
 
-- (void)fetchAllDogs:(void (^)(NSArray *, NSError *))callback
+- (void)firstFetch: (void (^)(NSArray *, NSError *))callback
 {
+    self.pageNumber = 0;
+    [self fetchMoreDogs:callback];
+}
+
+- (void)fetchMoreDogs:(void (^)(NSArray *, NSError *))callback
+{
+    if (self.pageNumber <= 0) {
+        self.pageNumber = 1;
+    } else {
+        self.pageNumber = self.pageNumber + 1;
+    }
     NSURL *url = [self urlForSearchTerm:@"dog"];
     
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *error) {
-          NSLog(@"response: %@", response);
           if (error) {
               callback(nil, error);
           } else {
@@ -47,7 +61,8 @@ static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
     NSURLQueryItem *dogItem = [NSURLQueryItem queryItemWithName:@"q" value: term];
     NSURLQueryItem *imageTypeItem = [NSURLQueryItem queryItemWithName:@"image_type" value:@"photo"];
     NSURLQueryItem *perPageItem = [NSURLQueryItem queryItemWithName:@"per_page" value:@"20"];
-    NSURLQueryItem *pageItem = [NSURLQueryItem queryItemWithName:@"page" value:@"3"];
+    NSString *page = [NSString stringWithFormat:@"%ld", (long)self.pageNumber];
+    NSURLQueryItem *pageItem = [NSURLQueryItem queryItemWithName:@"page" value:page];
     components.queryItems = @[keyItem, dogItem, imageTypeItem, perPageItem, pageItem];
     return components.URL;
 }

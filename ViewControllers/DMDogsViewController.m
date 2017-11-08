@@ -49,7 +49,7 @@
 }
 - (void)loadData
 {
-    [self.dogsDataSource fetchAllDogs:^(NSError *error) {
+    [self.dogsDataSource firstFetch:^(NSError *error) {
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
@@ -62,6 +62,15 @@
 
 - (IBAction)fetchMoreData:(id)sender {
     NSLog(@"fetching more...");
+    [self.dogsDataSource fetchMoreDogs:^(NSError *error) {
+        if (!error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+        } else {
+            //show error message
+        }
+    }];
 }
 
 - (IBAction)clearHistory:(id)sender {

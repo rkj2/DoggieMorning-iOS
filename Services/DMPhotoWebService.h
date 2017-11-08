@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DMPhotoWebService : NSObject
-- (void)fetchAllDogs: (void (^)(NSArray *dogs, NSError *error))callback;
+- (void)firstFetch: (void (^)(NSArray *, NSError *))callback;
+- (void)fetchMoreDogs: (void (^)(NSArray *dogs, NSError *error))callback;
 @end

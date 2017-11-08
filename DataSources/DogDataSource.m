@@ -44,15 +44,15 @@ static CGFloat const kGapBetweenCells = 2;
     [self clearHistoryFromDisk];
 }
 
-- (void)fetchAllDogs:(void (^)(NSError *))callback
+- (void)firstFetch:(void (^)(NSError *))callback
 {
-    [self.webService fetchAllDogs:^(NSArray *dogsJson, NSError *error) {
+    [self.webService firstFetch:^(NSArray *dogsJson, NSError *error) {
         if (error) {
             if (callback) {
                 callback(error);
             }
         } else {
-            self.dogs = [self populateObjectsWith:dogsJson];
+            [self populateObjectsWith:dogsJson];
             if (callback) {
                 callback(nil);
             }
@@ -60,16 +60,32 @@ static CGFloat const kGapBetweenCells = 2;
     }];
 }
 
-- (NSMutableArray *)populateObjectsWith: (NSArray *)dogsJson
+- (void)fetchMoreDogs:(void (^)(NSError *))callback
 {
-    NSMutableArray *dogsToReturn = [[NSMutableArray alloc] init];
-    for(NSDictionary *dogJson in dogsJson) {
-        Dog *dog = [[Dog alloc] initWithJson: dogJson];
-        if (dog != nil) {
-            [dogsToReturn addObject:dog];
+    [self.webService fetchMoreDogs:^(NSArray *dogsJson, NSError *error) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            [self populateObjectsWith:dogsJson];
+            if (callback) {
+                callback(nil);
+            }
+        }
+    }];
+}
+
+- (void)populateObjectsWith: (NSArray *)dogsJson
+{
+    @synchronized(self.dogs) {
+        for(NSDictionary *dogJson in dogsJson) {
+            Dog *dog = [[Dog alloc] initWithJson: dogJson];
+            if (dog != nil) {
+                [self.dogs addObject:dog];
+            }
         }
     }
-    return dogsToReturn;
 }
 
 #pragma mark - Delegate datasource methods
