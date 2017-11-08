@@ -34,7 +34,7 @@
 - (void)initializeServices
 {
     DMPhotoWebService *webService = [[DMPhotoWebService alloc] init];
-    self.dogsDataSource = [[DogDataSource alloc] initWith:webService];
+    self.dogsDataSource = [[DogDataSource alloc] initWith:webService forCollectionView:self.collectionView];
 }
 
 - (void)setUpCollectionView

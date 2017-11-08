@@ -12,6 +12,7 @@
 #import "DogDataSource.h"
 #import "DMDogCell.h"
 #import "Dog.h"
+#import "PersistenceService.h"
 
 static CGFloat const numberOfColumns = 2;
 static CGFloat const kGapBetweenCells = 2;
@@ -21,16 +22,20 @@ static CGFloat const kGapBetweenCells = 2;
 @property (nonatomic) NSMutableArray *dogs;
 @property (nonatomic) NSMutableDictionary *seenDogs;
 @property (nonatomic) CGRect screenBounds;
+@property (nonatomic) UICollectionView *collectionView;
+@property (nonatomic) PersistenceService *persistenceService;
 @end
 
 @implementation DogDataSource
 
-- (instancetype)initWith:(DMPhotoWebService *)webService
+- (instancetype)initWith:(DMPhotoWebService *)webService forCollectionView:(UICollectionView *)collectionView
 {
     if (!(self = [super init])) {
         return nil;
     }
     self.webService = webService;
+    self.collectionView = collectionView;
+    self.persistenceService = [[PersistenceService alloc] init];
     [self initializeAndClearHistory];
     return self;
 }
@@ -173,18 +178,7 @@ static CGFloat const kGapBetweenCells = 2;
 
 - (void)writeSeenHistoryToDisk
 {
-    NSString *fileName = [self appFileName];
-   
-    @synchronized(self.seenDogs) {
-        NSMutableDictionary *currentSeen = [self.seenDogs mutableCopy];
-        NSMutableDictionary *oldHistory = [self readHistoryFromDisk];
-        [currentSeen addEntriesFromDictionary:oldHistory];
-        [NSKeyedArchiver archiveRootObject: currentSeen toFile:fileName];
-    }
- 
-    //testing
-    NSMutableDictionary *history = [self readHistoryFromDisk];
-    NSLog(@"history: %@", history);
+    [self.persistenceService writeSeenHistoryToDiskForObjects:self.seenDogs];
 }
 
 - (NSDictionary *)readHistoryCopyFromDisk
@@ -195,7 +189,7 @@ static CGFloat const kGapBetweenCells = 2;
 - (NSMutableDictionary *)readHistoryFromDisk
 {
     NSMutableDictionary *seenFromDisk;
-    NSString *fileName = [self appFileName];
+    NSString *fileName = [self.persistenceService appFileName];
     seenFromDisk = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
     return seenFromDisk;
 }
@@ -210,32 +204,11 @@ static CGFloat const kGapBetweenCells = 2;
 
 - (void)clearHistoryFromDisk
 {
-    NSString *fileName = [self appFileName];
-    NSMutableDictionary *emptyDictionary = [[NSMutableDictionary alloc] init];
-    [NSKeyedArchiver archiveRootObject:emptyDictionary toFile:fileName];
+    [self.persistenceService clearHistoryFromDisk];
 }
 
 - (void)clearHistoryFromDiskAndUpdateView:(UICollectionView *)collectionView
 {
-    NSMutableDictionary *history = [self readHistoryFromDisk];
-    NSArray *historyDogs = [history allValues];
-    NSUInteger currentCount = self.dogs.count;
-    __block NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
-    @synchronized(self.dogs) {
-        [collectionView performBatchUpdates:^{
-            [self.dogs addObjectsFromArray:historyDogs];
-            [historyDogs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                NSUInteger newRow = currentCount + idx;
-                NSIndexPath *newPathToInsert = [NSIndexPath indexPathForItem:newRow inSection:0];
-                [indexPathsToInsert addObject:newPathToInsert];
-            }];
-            [collectionView insertItemsAtIndexPaths:indexPathsToInsert];
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-    }
-    
-    [self clearHistoryFromDisk];
+    [self.persistenceService clearHistoryFromDiskAndUpdateView:collectionView forObjects:self.dogs];
 }
 @end

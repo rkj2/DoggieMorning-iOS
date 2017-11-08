@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5CD96A6B8ADC4944B1825212 /* libPods-DoggieMorningTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1C6921C7DC976D687AA634 /* libPods-DoggieMorningTests.a */; };
 		695489881F35CD3467BB7090 /* libPods-DoggieMorning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C54C4588469AE6C9CA2395 /* libPods-DoggieMorning.a */; };
+		832932051FB2953F00D626FA /* PersistenceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 832932041FB2953F00D626FA /* PersistenceService.m */; };
 		833BE73A1FAEDCF5007496F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7391FAEDCF5007496F0 /* AppDelegate.m */; };
 		833BE7401FAEDCF5007496F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833BE73E1FAEDCF5007496F0 /* Main.storyboard */; };
 		833BE7431FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7411FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		3BE1B375987262B13D185294 /* Pods-DoggieMorningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggieMorningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoggieMorningTests/Pods-DoggieMorningTests.release.xcconfig"; sourceTree = "<group>"; };
+		832932031FB2953F00D626FA /* PersistenceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersistenceService.h; sourceTree = "<group>"; };
+		832932041FB2953F00D626FA /* PersistenceService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersistenceService.m; sourceTree = "<group>"; };
 		833BE7351FAEDCF5007496F0 /* DoggieMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggieMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		833BE7381FAEDCF5007496F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		833BE7391FAEDCF5007496F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 			children = (
 				833BE7681FAFEC3C007496F0 /* DMPhotoWebService.h */,
 				833BE7691FAFEC3C007496F0 /* DMPhotoWebService.m */,
+				832932031FB2953F00D626FA /* PersistenceService.h */,
+				832932041FB2953F00D626FA /* PersistenceService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				83A6F8211FB27A630085B745 /* DMHistoryViewController.m in Sources */,
 				833BE7611FAEE64E007496F0 /* Dog.m in Sources */,
 				833BE7431FAEDCF5007496F0 /* DoggieMorning.xcdatamodeld in Sources */,
+				832932051FB2953F00D626FA /* PersistenceService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

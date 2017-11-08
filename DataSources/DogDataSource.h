@@ -12,7 +12,7 @@
 
 @interface DogDataSource : NSObject <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-- (instancetype)initWith: (DMPhotoWebService *) webService;
+- (instancetype)initWith: (DMPhotoWebService *) webService forCollectionView: (UICollectionView *)collectionView;
 
 //start the dog fetch process
 - (void)firstFetch: (void (^)(NSError *))callback;
