@@ -111,7 +111,7 @@
                         <viewLayoutGuide key="safeArea" id="yfp-Np-VD0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dogs" id="Mlb-qe-NnB">
-                        <barButtonItem key="rightBarButtonItem" title="Show" style="plain" id="Etw-Bf-wTo">
+                        <barButtonItem key="rightBarButtonItem" title="Show" id="Etw-Bf-wTo">
                             <button key="customView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Cqm-Bk-btR">
                                 <rect key="frame" x="315" y="6" width="44" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
