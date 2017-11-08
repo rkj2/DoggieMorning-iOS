@@ -7,6 +7,7 @@
 //
 
 #import "PersistenceService.h"
+#import "Dog.h"
 
 @implementation PersistenceService
 
@@ -28,10 +29,6 @@
         [currentSeen addEntriesFromDictionary:oldHistory];
         [NSKeyedArchiver archiveRootObject: currentSeen toFile:fileName];
     }
-    
-    //testing
-    NSMutableDictionary *history = [self readHistoryFromDisk];
-    NSLog(@"history: %@", history);
 }
 
 - (void)clearHistoryFromDisk
@@ -76,5 +73,20 @@
     }
     
     [self clearHistoryFromDisk];
+}
+
+- (BOOL)historyContainsImageId:(NSString *)dogImageId
+{
+    NSDictionary *data = [self readHistoryCopyFromDisk];
+    NSArray *values = [data allValues];
+    NSPredicate *foundImageIdPredicate = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        if ([evaluatedObject isKindOfClass:[Dog class]] && values.count > 0) {
+            Dog *evaluatedObjectDog = (Dog *)evaluatedObject;
+            return [[evaluatedObjectDog dogImageId] isEqualToString:dogImageId];
+        } else {
+            return false;
+        }
+    }];
+    return [values filteredArrayUsingPredicate:foundImageIdPredicate].count > 0;
 }
 @end

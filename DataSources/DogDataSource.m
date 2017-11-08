@@ -87,7 +87,9 @@ static CGFloat const kGapBetweenCells = 2;
         for(NSDictionary *dogJson in dogsJson) {
             Dog *dog = [[Dog alloc] initWithJson: dogJson];
             if (dog != nil) {
-                [self.dogs addObject:dog];
+                if (![self.persistenceService historyContainsImageId:[dog dogImageId]]) {
+                    [self.dogs addObject:dog];
+                }
             }
         }
     }
@@ -141,7 +143,6 @@ static CGFloat const kGapBetweenCells = 2;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
     UICollectionView *collectionView = (UICollectionView *)scrollView;
     [self removeItemsAndUpdateCollectionView:collectionView];
     
@@ -158,7 +159,6 @@ static CGFloat const kGapBetweenCells = 2;
             [self findAndDeleteDogsInList:dogsToDelete];
             [collectionView deleteItemsAtIndexPaths:indexPathsToDelete];
         } completion:^(BOOL finished) {
-            NSLog(@"seen before deleting: %@", self.seenDogs);
             [self.seenDogs removeAllObjects];
         }];
     }

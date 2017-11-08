@@ -61,7 +61,6 @@
 }
 
 - (IBAction)fetchMoreData:(id)sender {
-    NSLog(@"fetching more...");
     [self.dogsDataSource fetchMoreDogs:^(NSError *error) {
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -79,8 +78,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //could use shouldPerformSegueWithIdentifier to check for history before seguing and giving better UX experience
+    
     if ([[segue identifier] isEqualToString:@"DMShowHistoryID"]) {
-        NSLog(@"in segue");
         DMHistoryViewController *historyController = (DMHistoryViewController *)[segue destinationViewController];
         NSDictionary *history = [self.dogsDataSource readHistoryCopyFromDisk];
         if ([history allKeys].count > 0) {

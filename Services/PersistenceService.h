@@ -17,5 +17,5 @@
 - (NSDictionary *)readHistoryCopyFromDisk;
 - (void)clearHistoryFromDisk;
 - (void)clearHistoryFromDiskAndUpdateView:(UICollectionView *)collectionView forObjects: (NSMutableArray *)objects;
-
+- (BOOL)historyContainsImageId: (NSString *)dogImageId;
 @end
