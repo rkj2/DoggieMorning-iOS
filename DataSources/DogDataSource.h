@@ -19,4 +19,7 @@
 
 //clear archived data
 - (void)clearHistoryFromDiskAndUpdateView:(UICollectionView *)collectionView;
+
+//fetch history
+- (NSDictionary *)readHistoryCopyFromDisk;
 @end

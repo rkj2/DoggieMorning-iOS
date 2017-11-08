@@ -171,6 +171,11 @@ static CGFloat const kGapBetweenCells = 2;
     NSLog(@"history: %@", history);
 }
 
+- (NSDictionary *)readHistoryCopyFromDisk
+{
+    return [[self readHistoryFromDisk] copy];
+}
+
 - (NSMutableDictionary *)readHistoryFromDisk
 {
     NSMutableDictionary *seenFromDisk;

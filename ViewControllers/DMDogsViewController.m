@@ -9,8 +9,10 @@
 #import "DMDogsViewController.h"
 #import "DogDataSource.h"
 #import "DMPhotoWebService.h"
+#import "DMHistoryViewController.h"
 
 @interface DMDogsViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *showButton;
 @property (nonatomic) DogDataSource *dogsDataSource;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -41,6 +43,10 @@
     self.collectionView.delegate = self.dogsDataSource;
 }
 
+- (void)styleButton
+{
+    [self.showButton setStyle:UIBarButtonItemStylePlain];
+}
 - (void)loadData
 {
     [self.dogsDataSource fetchAllDogs:^(NSError *error) {
@@ -61,5 +67,20 @@
 - (IBAction)clearHistory:(id)sender {
     [self.dogsDataSource clearHistoryFromDiskAndUpdateView:self.collectionView];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"DMShowHistoryID"]) {
+        NSLog(@"in segue");
+        DMHistoryViewController *historyController = (DMHistoryViewController *)[segue destinationViewController];
+        NSDictionary *history = [self.dogsDataSource readHistoryCopyFromDisk];
+        if ([history allKeys].count > 0) {
+            [historyController setHistory:history];
+        } else {
+            [historyController setHistory:@{}];
+        }
+    }
+}
+
 
 @end
