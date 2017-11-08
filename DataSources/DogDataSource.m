@@ -190,18 +190,7 @@ static CGFloat const kGapBetweenCells = 2;
 
 - (NSMutableDictionary *)readHistoryFromDisk
 {
-    NSMutableDictionary *seenFromDisk;
-    NSString *fileName = [self.persistenceService appFileName];
-    seenFromDisk = [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
-    return seenFromDisk;
-}
-
-- (NSString *)appFileName
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"dog-history.txt"];
-    return appFile;
+    return [self.persistenceService readHistoryFromDisk];
 }
 
 - (void)clearHistoryFromDisk
