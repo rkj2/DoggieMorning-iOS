@@ -12,6 +12,7 @@ static NSString *const kScheme = @"https";
 static NSString *const kHost = @"pixabay.com";
 static NSString *const kPath = @"/api/";
 static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
+static NSString *const kPerPageItems = @"20";
 
 @interface DMPhotoWebService()
 @property (nonatomic) NSUInteger pageNumber;
@@ -53,6 +54,9 @@ static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
 
 - (NSURL *)urlForSearchTerm:(NSString *)term
 {
+    
+    // Keys can be made constants
+    
     NSURLComponents *components = [[NSURLComponents alloc] init];
     components.scheme = kScheme;
     components.host = kHost;
@@ -60,7 +64,7 @@ static NSString *const kAPIKey = @"6936503-9a8fdba549da42ad9e802512b";
     NSURLQueryItem *keyItem = [NSURLQueryItem queryItemWithName:@"key" value:kAPIKey];
     NSURLQueryItem *dogItem = [NSURLQueryItem queryItemWithName:@"q" value: term];
     NSURLQueryItem *imageTypeItem = [NSURLQueryItem queryItemWithName:@"image_type" value:@"photo"];
-    NSURLQueryItem *perPageItem = [NSURLQueryItem queryItemWithName:@"per_page" value:@"20"];
+    NSURLQueryItem *perPageItem = [NSURLQueryItem queryItemWithName:@"per_page" value:kPerPageItems];
     NSString *page = [NSString stringWithFormat:@"%ld", (long)self.pageNumber];
     NSURLQueryItem *pageItem = [NSURLQueryItem queryItemWithName:@"page" value:page];
     components.queryItems = @[keyItem, dogItem, imageTypeItem, perPageItem, pageItem];

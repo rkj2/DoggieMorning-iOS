@@ -168,8 +168,10 @@ static CGFloat const kGapBetweenCells = 2;
 {
     @synchronized(self.dogs) {
         for (Dog *dogToDelete in dogsToDelete) {
-            NSUInteger deletionIndex = [self.dogs indexOfObject:dogToDelete];
-            [self.dogs removeObjectAtIndex: deletionIndex];
+            @autoreleasepool {
+                NSUInteger deletionIndex = [self.dogs indexOfObject:dogToDelete];
+                [self.dogs removeObjectAtIndex: deletionIndex];
+            }
         }
     }
 }
