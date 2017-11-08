@@ -7,7 +7,8 @@ target 'DoggieMorning' do
 
   # Pods for DoggieMorning
   pod 'SDWebImage', '~> 4.0'
-
+  pod 'AFNetworking', '~> 3.0'
+  
   target 'DoggieMorningTests' do
     inherit! :search_paths
     # Pods for testing

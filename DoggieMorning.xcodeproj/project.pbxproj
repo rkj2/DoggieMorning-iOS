@@ -24,6 +24,7 @@
 		833BE7721FB0D4FB007496F0 /* DMDogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833BE7711FB0D4FB007496F0 /* DMDogCell.m */; };
 		83A6F8211FB27A630085B745 /* DMHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A6F8201FB27A630085B745 /* DMHistoryViewController.m */; };
 		83A6F8241FB27BD10085B745 /* DMDogHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A6F8231FB27BD10085B745 /* DMDogHistoryCell.m */; };
+		83CE784D1FB2F9680056B9A6 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CE784C1FB2F9680056B9A6 /* Alert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		83A6F8201FB27A630085B745 /* DMHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMHistoryViewController.m; sourceTree = "<group>"; };
 		83A6F8221FB27BD10085B745 /* DMDogHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMDogHistoryCell.h; sourceTree = "<group>"; };
 		83A6F8231FB27BD10085B745 /* DMDogHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMDogHistoryCell.m; sourceTree = "<group>"; };
+		83CE784B1FB2F9680056B9A6 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = "../../../../Downloads/Alert-master/AlertDemo/Alert/Alert.h"; sourceTree = "<group>"; };
+		83CE784C1FB2F9680056B9A6 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Alert.m; path = "../../../../Downloads/Alert-master/AlertDemo/Alert/Alert.m"; sourceTree = "<group>"; };
 		923DA5B6CD94D65D8EC94C3C /* Pods-DoggieMorning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggieMorning.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoggieMorning/Pods-DoggieMorning.release.xcconfig"; sourceTree = "<group>"; };
 		994DF81EED9ED338FF6C920B /* Pods-DoggieMorningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggieMorningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggieMorningTests/Pods-DoggieMorningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFE50F3BEC92664BBCE44781 /* Pods-DoggieMorning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggieMorning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggieMorning/Pods-DoggieMorning.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 		833BE72C1FAEDCF5007496F0 = {
 			isa = PBXGroup;
 			children = (
+				83CE784B1FB2F9680056B9A6 /* Alert.h */,
+				83CE784C1FB2F9680056B9A6 /* Alert.m */,
 				833BE76B1FB0C7D1007496F0 /* ViewControllers */,
 				833BE76F1FB0D4D2007496F0 /* UI */,
 				833BE7621FAEE658007496F0 /* Models */,
@@ -420,6 +425,7 @@
 				833BE76A1FAFEC3C007496F0 /* DMPhotoWebService.m in Sources */,
 				83A6F8241FB27BD10085B745 /* DMDogHistoryCell.m in Sources */,
 				833BE76E1FB0C809007496F0 /* DMDogsViewController.m in Sources */,
+				83CE784D1FB2F9680056B9A6 /* Alert.m in Sources */,
 				833BE7661FAEEA8F007496F0 /* DogDataSource.m in Sources */,
 				83A6F8211FB27A630085B745 /* DMHistoryViewController.m in Sources */,
 				833BE7611FAEE64E007496F0 /* Dog.m in Sources */,

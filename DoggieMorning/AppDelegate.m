@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Dog.h"
 #import "DogDataSource.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
+#import "Alert.h"
 
 @interface AppDelegate ()
 
@@ -18,15 +20,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
     //User coordinator pattern here - maybe overkill
-  
     
+    [self monitorNetwork];
     
     return YES;
 }
 
+- (void)monitorNetwork
+{
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status == AFNetworkReachabilityStatusUnknown || status == AFNetworkReachabilityStatusNotReachable) {
+            NSLog(@"Network not reachable");
+            [self showNetworkIssue];
+        }
+    }];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+}
+
+- (void)showNetworkIssue
+{
+    Alert *alert = [[Alert alloc] initWithTitle:@"Network connection issue." duration:4.0 completion:^{}];
+    [alert showAlert];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
